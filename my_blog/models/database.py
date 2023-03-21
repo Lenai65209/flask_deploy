@@ -1,6 +1,7 @@
 from flask_sqlalchemy import SQLAlchemy
-db.create_all()
+
 db = SQLAlchemy()
+db.create_all()
 __all__ = [
     "db",
 ]
