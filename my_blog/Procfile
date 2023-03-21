@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 web: gunicorn wsgi:app --log-file -
+=======
+web: gunicorn run:app
+>>>>>>> 405f7994db4d896899640c113430c5f4f554fccf
