@@ -15,8 +15,7 @@ users_app = Blueprint("users_app", __name__, url_prefix="/users",
 @login_required
 def users_list():
     users = User.query.all()
-    return render_template("users/list.html", users=users,
-                           )
+    return render_template("users/list.html", users=users,)
 
 
 @users_app.route("/<int:user_id>/", endpoint="details")
@@ -27,9 +26,6 @@ def user_details(user_id: int):
         raise NotFound(f"User #{user_id} doesn't exist!")
     if user.author:
         article_id=user.author.id
-        count_articles_det: Dict = requests.get(f'https://flask-deploy-vtwe.onrender.com/api/authors/1/event_get_articles_count/').json()
     else:
         count_articles_det={'count':'is not the author'}
-    return render_template("users/details.html", user=user,
-                           count_articles_det=count_articles_det['count'],
-                           )
+    return render_template("users/details.html", user=user,)
