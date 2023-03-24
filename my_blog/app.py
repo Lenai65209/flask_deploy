@@ -20,7 +20,7 @@ app.register_blueprint(authors_app, url_prefix="/authors")
 
 app.config.from_object(DevConfig)
 
-file_path = os.path.abspath(os.getcwd()) + "\database.db"
+file_path = os.path.abspath(os.getcwd()) + "/database.db"
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + file_path
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
