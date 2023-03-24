@@ -13,7 +13,7 @@ User #{{ user.id }}
 <span class="badge bg-secondary">staff</span>
 {% endif %}
 <div>
-Articles: (count: {{ count_articles_det }}):
+Articles: 
 <ul>
     {% for article in user.author.articles %}
     <li>{{article.id}} - {{ article.title }}</li>
