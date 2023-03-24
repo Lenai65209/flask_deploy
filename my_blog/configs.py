@@ -4,8 +4,7 @@ import os
 class BaseConfig(object):
     DEBUG = False
     TESTING = False
-    # SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
-    SQLALCHEMY_DATABASE_URI = "postgresql://elena_user:rBIVb8IaDoMHj56WNnCyGNsoLJLFuzDz@dpg-cge9dt02qv21ab400rm0-a/elena"
+    SQLALCHEMY_DATABASE_URI = "sqlite:///:memory:"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = "123456"
     WTF_CSRF_ENABLED = True
