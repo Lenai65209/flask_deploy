@@ -24,7 +24,7 @@ users_app = Blueprint("users_app", __name__)
 def articles_list():
     articles = Article.query.all()
     # call RPC method
-    count_articles: Dict = requests.get('http://127.0.0.1:5000/api/articles/event_get_count/').json()
+    count_articles: Dict = requests.get('https://flask-deploy-vtwe.onrender.com/api/articles/event_get_count/').json()
     return render_template("articles/list.html", articles=articles, 
                            count_articles=count_articles['count'],
                            )
