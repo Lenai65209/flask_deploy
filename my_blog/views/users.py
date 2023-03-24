@@ -27,7 +27,7 @@ def user_details(user_id: int):
         raise NotFound(f"User #{user_id} doesn't exist!")
     if user.author:
         article_id=user.author.id
-        count_articles_det: Dict = requests.get(f'http://127.0.0.1:5000/api/authors/{article_id}/event_get_articles_count/').json()
+        count_articles_det: Dict = requests.get(f'http://flask-deploy-vtwe.onrender.com/api/authors/{article_id}/event_get_articles_count/').json()
     else:
         count_articles_det={'count':'is not the author'}
     return render_template("users/details.html", user=user,
