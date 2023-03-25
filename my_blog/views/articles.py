@@ -25,7 +25,7 @@ def articles_list():
     articles = Article.query.all()
     count_articles: Dict = requests.get('https://flask-deploy-vtwe.onrender.com/api/articles/event_get_count/').json()
     return render_template("articles/list.html", articles=articles,
-                           count_articles=count_articles['count'],
+                           # count_articles=count_articles['count'],
                           )
 
 
