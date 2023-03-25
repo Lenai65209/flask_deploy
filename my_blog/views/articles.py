@@ -23,7 +23,7 @@ users_app = Blueprint("users_app", __name__)
 @articles_app.route("/", endpoint="list")
 def articles_list():
     articles = Article.query.all()
-    count_articles = requests.get('https://flask-deploy-vtwe.onrender.com/api/articles/event_get_count/')
+    # count_articles = requests.get('https://flask-deploy-vtwe.onrender.com/api/articles/event_get_count/')
     return render_template("articles/list.html", articles=articles,
                            # count_articles=count_articles['count'],
                           )
